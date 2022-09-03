@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Grow</title>
+  <link rel="icon" href="./favicon.ico">
+  <link href="./assets/css/reg.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="page">
+    <div class="banner">
+      <div class="banner__label">
+        <p>5 лет сохраняем ценности, меняясь к лучшему</p>
+      </div>
+    </div>
+    <div class="reg">
+      <div class="reg__wrapper">
+        <form method="POST" class="reg__form">
+          <p class="reg__label">регистрация</p>
+          <p class="error-text">Неверное имя или почта</p>
+          <input type="text" name="name" id="name" class="input-text" placeholder="Ф.И.О.">
+          <input type="email" name="email" id="email" class="input-text" placeholder="E-MAIL">
+          <div class="reg__submit">
+            <div class="reg__check">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="checkbox" value="customCheckbox" class="custom-checkbox__checkbox-default">
+                <span class="custom-checkbox__checkbox-custom">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="custom-checkbox__checkmark">
+                    <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+                  </svg>
+                </span>
+                <span class="custom-checkbox__label"></span>
+              </label>
+              <p>
+                Я даю своё согласие на обработку моих персональных данных в соответствии с <a href="#">Положением об организации обработки ПДн</a> в «ЯКОБС ДАУ ЭГБЕРТС РУС».
+              </p>
+            </div>
+            <button class="reg-btn">Отправить</button>
+          </div>
+          <a href="#" class="reg__link">Авторизация</a>
+        </form>
+
+        <!-- <div class="reg-success">
+          <p class="reg-success__title">
+            Вы успешно зарегистрировались, пароль выслан на почту
+          </p>
+          <button class="reg-btn">понятно</button>
+        </div> -->
+
+        <!-- <form method="POST" class="pass-reset">
+          <p class="pass-reset__title">сброс пароля</p>
+          <p class="error-text">Неверное имя или почта</p>
+          <p class="pass-reset__info">Укажите почту, с которой вы регистрировались на сайте</p>
+          <input type="email" name="email" id="email" class="input-text" placeholder="E-MAIL">
+          <button class="reg-btn">отправить</button>
+        </form> -->
+
+        <!-- <div class="pass-restore">
+          <p class="pass-restore__title">восстановить пароль</p>
+          <p class="pass-restore__info">Новый пароль выслан на указанный адрес электронной почты</p>
+          <button class="reg-btn">войти</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
