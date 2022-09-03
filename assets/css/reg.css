@@ -37,11 +37,6 @@ body {
 
 main {
   padding: 30px 0;
-  background-color: #fcf9f4;
-  background-image: url("../img/main-bg.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: left bottom;
   overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
@@ -118,9 +113,8 @@ svg {
   margin-left: calc((24px + 0px) * -1);
   border-radius: 0px;
   box-sizing: border-box;
-  border: 2px solid #f7eedc;
-  background-color: transparent;
-  cursor: pointer;
+  border: 2px solid #90714D;
+  background-color: #fff;
   transition: all 0.3s ease;
 }
 .custom-checkbox__checkmark {
@@ -129,7 +123,7 @@ svg {
   position: absolute;
   top: calc(50% - 40%);
   left: calc(50% - 40%);
-  fill: #f7eedc;
+  fill: #90714D;
   opacity: 0;
 }
 .custom-checkbox__label {
@@ -141,7 +135,7 @@ svg {
   opacity: 1;
 }
 .custom-checkbox__checkbox-default:focus + .custom-checkbox__checkbox-custom {
-  box-shadow: 0 0 5px 1px #f7eedc;
+  box-shadow: 0 0 5px 1px #90714D;
   outline: none;
 }
 .custom-checkbox__checkbox-default:disabled + .custom-checkbox__checkbox-custom, .custom-checkbox__checkbox-default:disabled ~ .custom-checkbox__label {
@@ -150,95 +144,76 @@ svg {
 }
 
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 480px;
-  position: relative;
-  background-color: #F7EEDD;
-  background-image: url("../img/header-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  height: 100%;
+  background-color: #FCF9F4;
 }
 @media screen and (max-width: 1280px) {
   .banner {
-    height: 200px;
-    background-image: url("../img/reg-img-3.png"), url("../img/reg-img-2.png"), url("../img/reg-img-1.png");
-    background-position: top -20px right -40px, top 15px left calc(50% - 75px), bottom -100px left;
-    background-size: auto;
   }
 }
 @media screen and (max-width: 576px) {
   .banner {
-    height: 165px;
-    background-image: url("../img/reg-img-mobile-3.png"), url("../img/reg-img-2.png"), url("../img/reg-img-mobile-1.png");
-    background-position: top 10px right, top left, bottom -60px left;
-    background-size: auto, 210px 80px, auto;
   }
 }
-.banner__label {
-  width: 665px;
-  height: 260px;
-  position: absolute;
-  right: 50px;
-  bottom: 0;
-  transform: translateY(40%);
-  background-image: url("../img/header-label-bg.png");
+.banner__wrapper {
+  display: flex;
+  width: 1276px;
+  height: 566px;
+  background-image: url("../img/header-bg1.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-color: #FCF9F4;
 }
-@media screen and (max-width: 1280px) {
-  .banner__label {
-    width: 270px;
-    height: 105px;
-    right: 15px;
+
+@media screen and (max-width: 1276px) {
+  .banner__wrapper{
+    display: flex;
+    width: 1148px;
+    height: 510px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .banner__wrapper {
+    width: 768px;
+    height: 341px;
+    background-image: url("../img/header-bg-tab.png");
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner__wrapper {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner__wrapper {
+    height: 270px;
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .banner__label {
-    width: 190px;
-    height: 73px;
-    right: 10px;
+  .banner__wrapper {
+    width: 388px;
+    height:262px;
+    background-image: url("../img/header-bg-mob.png");
   }
-}
-.banner__label p {
-  max-width: 360px;
-  position: absolute;
-  top: 90px;
-  left: 187px;
-  color: #fff;
-  font-family: "HelveticaNeueBlackCondensed", sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 1280px) {
-  .banner__label p {
-    max-width: 140px;
-    font-size: 11px;
-    top: 35px;
-    left: 80px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .banner__label p {
-    max-width: 110px;
-    font-size: 8px;
-    top: 25px;
-    left: 50px;
-  }
-}
+} 
+
+
 
 .reg {
   width: 100%;
   height: 100%;
   flex-grow: 1;
-  padding: 70px 70px;
-  background-image: url("../img/main-bg-2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 70px;
+  background: #F7EEDD;
 }
 @media screen and (max-width: 1280px) {
   .reg {
@@ -258,84 +233,59 @@ svg {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-}
-@media screen and (max-width: 1280px) {
-  .reg__wrapper {
-    display: flex;
+  display: flex;
     justify-content: center;
     align-items: center;
-  }
 }
 .reg__form {
-  width: 1073px;
-  height: 390px;
+  width: 332px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  padding: 35px 25px;
+  margin: 20px 10px;
   background-image: url("../img/reg-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
-@media screen and (max-width: 1280px) {
-  .reg__form {
-    width: 332px;
-    height: 400px;
-    padding: 0 25px;
-    background-image: url("../img/reg-bg-mobile.png");
-  }
+
+.reg__form_login{
+  width: 330px;
+  height: 332px;
+  background-image: url("../img/log-bg.png");
 }
-@media screen and (max-width: 1280px) {
-  .reg__form_login {
-    width: 330px;
-    height: 332px;
-    padding: 0 25px;
-    padding-bottom: 0;
-    background-image: url("../img/reg-bg-mobile-2.png");
-  }
-}
+
 .reg__label {
+  font-family: "HelveticaNeueBlackCondensed", sans-serif;
   margin-bottom: 15px;
-  color: #f7eedc;
-  font-size: 43px;
+  color: #90714D;
+  font-size: 24px;
+  font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
 }
-@media screen and (max-width: 1280px) {
-  .reg__label {
-    color: #fff;
-    font-size: 24px;
-    font-family: "HelveticaNeueBlackCondensed", sans-serif;
-    font-weight: 900;
-    text-align: center;
-  }
-}
+
 .reg .input-text {
-  width: 100% !important;
+  width: 280px !important;
+  height: 44px;
+  color: #8C7454;
+  background-color: #fff;
 }
 .reg__submit {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   margin-bottom: 20px;
-}
-@media screen and (max-width: 1280px) {
-  .reg__submit {
-    flex-direction: column;
-  }
 }
 .reg__check {
   max-width: 530px;
   display: flex;
   align-items: flex-start;
-  margin-right: 10px;
-}
-@media screen and (max-width: 1280px) {
-  .reg__check {
-    margin-bottom: 35px;
-    margin-right: 0;
-  }
+  margin-bottom: 35px;
 }
 .reg__check .custom-checkbox {
   flex-shrink: 0;
@@ -344,53 +294,42 @@ svg {
 }
 .reg__check p,
 .reg__check a {
-  color: #f7eedc;
-  font-size: 18px;
+  color: #90714D;
+  font-size: 12px;
+  line-height: 14px;
 }
-@media screen and (max-width: 1280px) {
-  .reg__check p,
-.reg__check a {
-    color: #fff;
-    font-size: 12px;
-  }
-}
+
 .reg__check a {
   text-decoration: underline;
 }
 .reg__link {
   margin: 0 auto;
-  color: #f7eedc;
-  font-size: 16px;
+  color:  #90714D;
+  font-size: 12px;
   text-decoration: underline;
-}
-@media screen and (max-width: 1280px) {
-  .reg__link {
-    color: #fff;
-    font-size: 12px;
-  }
 }
 .reg .input-text {
   width: 280px;
-  height: 50px;
+  height: 44px;
   flex-shrink: 0;
   margin-bottom: 20px;
   padding: 0 20px;
   border: none;
   outline: none;
-  background-color: #F7EEDD;
-  color: #8C7454;
-  font-size: 18px;
 }
-@media screen and (max-width: 1280px) {
-  .reg .input-text {
-    height: 44px;
-  }
+
+input:-internal-autofill-selected{
+  background-color: #fff;
 }
 .reg .reg-btn {
+  margin-left: 0;
+  align-self: center;
+  font-family: "HelveticaNeueBoldCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
   width: 190px;
   height: 40px;
   flex-shrink: 0;
-  margin-left: auto;
   background-color: transparent;
   background-image: url("../img/btn-submit-bg.png");
   background-repeat: no-repeat;
@@ -400,15 +339,7 @@ svg {
   font-size: 18px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 1280px) {
-  .reg .reg-btn {
-    margin-left: 0;
-    align-self: center;
-    font-family: "HelveticaNeueBoldCondensed", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-  }
-}
+
 .reg .error-text {
   margin-bottom: 15px;
   color: #FE7A7A;
@@ -430,21 +361,15 @@ svg {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 70px;
   padding: 0 20px;
   background-image: url("../img/reg-success-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
-@media screen and (max-width: 1280px) {
-  .reg .reg-success {
-    margin-top: 0;
-  }
-}
 .reg .reg-success__title {
   margin-bottom: 25px;
-  color: #fff;
+  color:  #90714D;
   font-size: 24px;
   font-family: "HelveticaNeueBlackCondensed", sans-serif;
   font-weight: 900;
@@ -462,21 +387,15 @@ svg {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 70px;
   padding: 0 20px;
   background-image: url("../img/pass-reset-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
-@media screen and (max-width: 1280px) {
-  .reg .pass-reset {
-    margin-top: 0;
-  }
-}
 .reg .pass-reset__title {
   margin-bottom: 10px;
-  color: #fff;
+  color: #90714D;
   font-size: 24px;
   font-family: "HelveticaNeueBlackCondensed", sans-serif;
   font-weight: 900;
@@ -486,7 +405,7 @@ svg {
 .reg .pass-reset__info {
   max-width: 180px;
   margin-bottom: 15px;
-  color: #fff;
+  color: #90714D;
   font-size: 12px;
   text-align: center;
 }
@@ -501,21 +420,15 @@ svg {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 70px;
   padding: 0 20px;
   background-image: url("../img/pass-restore-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
-@media screen and (max-width: 1280px) {
-  .reg .pass-restore {
-    margin-top: 0;
-  }
-}
 .reg .pass-restore__title {
   margin-bottom: 17px;
-  color: #fff;
+  color: #90714D;
   font-size: 24px;
   font-family: "HelveticaNeueBlackCondensed", sans-serif;
   font-weight: 900;
@@ -525,7 +438,7 @@ svg {
 .reg .pass-restore__info {
   max-width: 250px;
   margin-bottom: 25px;
-  color: #fff;
+  color: #90714D;
   font-size: 12px;
   text-align: center;
 }
