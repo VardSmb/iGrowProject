@@ -223,12 +223,7 @@ svg {
     padding: 10px;
   }
 }
-@media screen and (max-width: 576px) {
-  .reg {
-    align-items: flex-start;
-    padding-top: 50px;
-  }
-}
+
 .reg__wrapper {
   width: 100%;
   max-width: 1920px;
@@ -257,6 +252,8 @@ svg {
   height: 332px;
   background-image: url("../img/log-bg.png");
 }
+
+
 
 .reg__label {
   font-family: "HelveticaNeueBlackCondensed", sans-serif;
@@ -444,4 +441,48 @@ input:-internal-autofill-selected{
 }
 .reg .pass-restore .reg-btn {
   margin-left: 0;
+}
+
+.reg .reg-btn:hover{
+  color: #fff;
+}
+
+
+@media screen and (max-width: 576px) {
+  .reg {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .reg__form {
+    max-width: 332px;
+    min-height: 400px;
+    padding: 20px 10px;
+    margin: 10px;
+    background-size: 100% 100%;
+  }
+
+  .reg .pass-reset {
+    max-width: 332px;
+    min-height: 268px;
+    padding: 0 10px;
+  }
+
+  .reg__form_login{
+    max-width: 330px;
+    min-height: 332px;
+  }
+
+  .reg .input-text {
+    max-width: 280px;
+    height: 44px;
+  } 
+
+  .reg .reg__label,
+  .reg .reg-success__title,
+  .reg .pass-reset__title,
+  .reg .pass-restore__title{
+    font-size: 20px;
+  }
+
 }
