@@ -160,17 +160,17 @@
             </select>
           </div>
 
-          <ul class="plan__week plan__week_active" data-id="1">
+          <ul id="plan" class="plan__week plan__week_active" data-id="1">
             <li class="plan__day">
-              <p class="plan__name">Понедельник 03.10</p>
+              <p class="plan__name">понедельник 03.10</p>
               <ul class="plan__list">
-                <!-- day-plan_result / результат = brown -->
-                <!-- day-plan_development / развитие = red -->
-                <!-- day-plan_progress / достижение = blue -->
-                <!-- day-plan_growth / рост = grey -->
-                <!-- day-plan_promotion / поощрение = yellow -->
-                <!--day-plan_communication / взаимодействие = green -->
-                <!-- day-plan_speaker / сессия спикера -->
+              
+            <!-- day-plan_result / результат = brown -->
+            <!-- day-plan_development / развитие = red -->
+            <!-- day-plan_progress / достижение = blue -->
+            <!-- day-plan_growth / рост = grey -->
+            <!-- day-plan_promotion / поощрение = orange -->
+            <!--day-plan_communication / взаимодействие = green -->
 
                 <!-- Vote -->
                 <!-- day-plan_vote-success - vote is success -->
@@ -187,6 +187,9 @@
                       <div class="day-plan__external-speaker">
                         <p>Внешний спикер</p>
                         <p>Ольга Усольцева</p>
+                      </div>
+                      <div class="day-plan__aside">
+                        <div class="day-plan__arrow-toggle"></div>
                       </div>
                     </div>
                     <div class="hidden">
@@ -213,7 +216,7 @@
                   </div>
                 </li> -->
 
-                <li class="plan__item day-plan day-plan_result day-plan_vote-success day-plan_speaker">
+                <li class="plan__item day-plan day-plan_result">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">11:00 - 12:00</p>
@@ -226,16 +229,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-
-                      <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <a href="#" class="day-plan__btn-status day-plan__btn-status_signed-up">Вы записаны</a>
-                      <a href="#" class="day-plan__btn-status day-plan__btn-status_session-end">Сессия закончена</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -249,7 +244,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="plan__item day-plan day-plan_promotion day-plan_vote-fail">
+                <li class="plan__item day-plan day-plan_promotion">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">14:00 - 15:00</p>
@@ -262,29 +257,44 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
                               <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
                               <span class="checkbox-cup__checkbox-custom"></span>
                             </label>
-                            Алексеев Алексей
+                            Алексей Алексеев
                           </li>
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
                               <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
                               <span class="checkbox-cup__checkbox-custom"></span>
                             </label>
-                            Алексей Севастьянов
+                            Алексей Севостьянов
                           </li>
                         </ul>
                       </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="plan__item day-plan day-plan_development">
+                  <div class="day-plan__main">
+                    <div class="visible">
+                      <p class="day-plan__time">15:00 – 15:30</p>
+                      <div class="day-plan__external-speaker">
+                        <p>Внешний спикер</p>
+                        <p>Роман Тышковский, Odgers Berndtson</p>
+                      </div>
+                      <p class="day-plan__description">
+                      </p>
+                      <div class="day-plan__aside">
+                        <div class="day-plan__arrow-toggle"></div>
+                      </div>
+                    </div>
+                    <div class="hidden">
+                      <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
                     </div>
                   </div>
                 </li>
@@ -292,10 +302,6 @@
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">16:00 - 17:00</p>
-                      <div class="day-plan__external-speaker">
-                        <p>Внешний спикер</p>
-                        <p>Дмитрий Петров</p>
-                      </div>
                       <p class="day-plan__description">
                         ESG стратегия: ищем возможности для роста
                       </p>
@@ -305,10 +311,14 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
+                      <div class="day-plan__speakers">
+                        <p>Спикеры:</p>
+                        <ul class="day-plan__speakers-list">
+                          <li class="day-plan__speakers-item">
+                            Дмитрий Петров
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -330,12 +340,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -362,12 +368,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -385,10 +387,6 @@
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">16:00 - 17:00</p>
-                      <div class="day-plan__external-speaker">
-                        <p>Внешний спикер</p>
-                        <p>Светлана Обручкова</p>
-                      </div>
                       <p class="day-plan__description">
                         Женское лидерство
                       </p>
@@ -398,10 +396,14 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
+                      <div class="day-plan__speakers">
+                        <p>Спикеры:</p>
+                        <ul class="day-plan__speakers-list">
+                          <li class="day-plan__speakers-item">
+                            Светлана Обручкова
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -410,12 +412,15 @@
             <li class="plan__day">
               <p class="plan__name">среда 05.10</p>
               <ul class="plan__list">
-                <li class="plan__item day-plan day-plan_development">
+                <li class="plan__item day-plan day-plan_result">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">11:00 – 12:00</p>
+                      <div class="day-plan__external-speaker">
+                        <p>Внешний спикер</p>
+                        <p>Afnan Ahsan, Perfetti Van Melle</p>
+                      </div>
                       <p class="day-plan__description">
-                        Being a leader
                       </p>
                       <div class="day-plan__aside">
                         <div class="day-plan__arrow-toggle"></div>
@@ -423,29 +428,6 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
-                      <div class="day-plan__speakers">
-                        <p>Спикеры</p>
-                        <ul class="day-plan__speakers-list">
-                          <li class="day-plan__speakers-item">
-                            <label class="checkbox-cup day-plan__checkbox">
-                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
-                              <span class="checkbox-cup__checkbox-custom"></span>
-                            </label>
-                            Afnan Ahsan
-                          </li>
-                          <li class="day-plan__speakers-item">
-                            <label class="checkbox-cup day-plan__checkbox">
-                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
-                              <span class="checkbox-cup__checkbox-custom"></span>
-                            </label>
-                             Perfetti Van Melle
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </li>
@@ -462,35 +444,19 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
-                      <div class="day-plan__speakers">
-                        <p>Спикеры</p>
-                        <ul class="day-plan__speakers-list">
-                          <li class="day-plan__speakers-item">
-                            <label class="checkbox-cup day-plan__checkbox">
-                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
-                              <span class="checkbox-cup__checkbox-custom"></span>
-                            </label>
-                            
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </li>
-                <li class="plan__item day-plan day-plan_result">
+                <li class="plan__item day-plan day-plan_growth">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">15:00 – 16:00</p>
                       <div class="day-plan__external-speaker">
                         <p>Внешний спикер</p>
-                        <p>Роман Тышковский</p>
+                        <p>Михаил Бурмистров, InfoLine</p>
                       </div>
                       <p class="day-plan__description">
-                        Какие навыки сейчас важны на рынке? - онлайн дискуссия
+                        Розничная торговля Food и потребительский рынок России 2022 года
                       </p>
                       <div class="day-plan__aside">
                         <div class="day-plan__arrow-toggle"></div>
@@ -498,10 +464,6 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                     </div>
                   </div>
                 </li>
@@ -523,12 +485,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -549,14 +507,37 @@
                     </div>
                   </div>
                 </li>
+                <li class="plan__item day-plan day-plan_promotion">
+                  <div class="day-plan__main">
+                    <div class="visible">
+                      <p class="day-plan__time">13:30 – 14:30</p>
+                      <p class="day-plan__description">
+                        Лайфхаки по уходу за обувью: вырабатываем дисплину и продлеваем жизнь вещам</p>
+                      <div class="day-plan__aside">
+                        <div class="day-plan__arrow-toggle"></div>
+                      </div>
+                    </div>
+                    <div class="hidden">
+                      <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
+                      <div class="day-plan__speakers">
+                        <p>Спикеры:</p>
+                        <ul class="day-plan__speakers-list">
+                          <li class="day-plan__speakers-item">
+                            <label class="checkbox-cup day-plan__checkbox">
+                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
+                              <span class="checkbox-cup__checkbox-custom"></span>
+                            </label>
+                            Наталья Ерофеева
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
                 <li class="plan__item day-plan day-plan_growth">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">15:00 – 16:30</p>
-                      <div class="day-plan__external-speaker">
-                        <p>Внешний спикер</p>
-                        <p>Тимур Жанабеков</p>
-                      </div>
                       <p class="day-plan__description">
                         Блокчейн и криптовалюта
                       </p>
@@ -566,10 +547,14 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
+                      <div class="day-plan__speakers">
+                        <p>Спикеры:</p>
+                        <ul class="day-plan__speakers-list">
+                          <li class="day-plan__speakers-item">
+                            Тимур Жанабеков
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -582,10 +567,6 @@
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">10:00 – 13:00</p>
-                      <div class="day-plan__external-speaker">
-                        <p>Внешний спикер</p>
-                        <p>Команда завода</p>
-                      </div>
                       <p class="day-plan__description">
                         Экскурсия на завод для новых сотрудников<br>
                         Только 30 мест, успей записаться!
@@ -596,39 +577,11 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="plan__item day-plan day-plan_development">
-                  <div class="day-plan__main">
-                    <div class="visible">
-                      <p class="day-plan__time">11:00 – 12:30</p>
-                      <p class="day-plan__description">
-                        Брейншторм: Как сделать лидерские способности понятными.
-                      </p>
-                      <div class="day-plan__aside">
-                        <div class="day-plan__arrow-toggle"></div>
-                      </div>
-                    </div>
-                    <div class="hidden">
-                      <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
-                            <label class="checkbox-cup day-plan__checkbox">
-                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
-                              <span class="checkbox-cup__checkbox-custom"></span>
-                            </label>
-                            Бастанова Айгуль
+                            Команда завода
                           </li>
                         </ul>
                       </div>
@@ -648,12 +601,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -688,12 +637,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -720,12 +665,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -744,7 +685,7 @@
                     <div class="visible">
                       <p class="day-plan__time">16:00 – 16:50</p>
                       <p class="day-plan__description">
-                        ТКАМ - долгожданная коллаборация в новой реальности
+                        Territory Field Force Managers: долгожданная коллаборация в новой реальности
                       </p>
                       <div class="day-plan__aside">
                         <div class="day-plan__arrow-toggle"></div>
@@ -752,12 +693,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция, брейншторм</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -810,12 +747,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -842,33 +775,13 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
-                      <div class="day-plan__speakers">
-                        <p>Спикеры</p>
-                        <ul class="day-plan__speakers-list">
-                          <li class="day-plan__speakers-item">
-                            <label class="checkbox-cup day-plan__checkbox">
-                              <input type="checkbox" name="checkbox" value="customCheckbox" class="checkbox-cup__checkbox-default">
-                              <span class="checkbox-cup__checkbox-custom"></span>
-                            </label>
-                            
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </li>
-                <li class="plan__item day-plan  day-plan_development">
+                <li class="plan__item day-plan day-plan_development">
                   <div class="day-plan__main">
                     <div class="visible">
                       <p class="day-plan__time">16:00 – 17:00</p>
-                      <div class="day-plan__external-speaker">
-                        <p>Внешний спикер</p>
-                        <p>Команда PMT</p>
-                      </div>
                       <p class="day-plan__description">
                         Честно о провалах и ошибках или как найти свои грабли
                       </p>
@@ -878,10 +791,14 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
+                      <div class="day-plan__speakers">
+                        <p>Спикеры:</p>
+                        <ul class="day-plan__speakers-list">
+                          <li class="day-plan__speakers-item">
+                            Команда PMT
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -903,12 +820,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -935,12 +848,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -967,12 +876,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -1011,12 +916,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -1040,7 +941,7 @@
                 <li class="plan__item day-plan day-plan_development">
                   <div class="day-plan__main">
                     <div class="visible">
-                      <p class="day-plan__time">13:00 - 14:40</p>
+                      <p class="day-plan__time">15:00 - 17:00</p>
                       <div class="day-plan__external-speaker">
                         <p>Внешний спикер</p>
                         <p>Михаил Прокофьев</p>
@@ -1054,10 +955,6 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Лекция</span>
-                      </p>
                     </div>
                   </div>
                 </li>
@@ -1079,12 +976,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Онлайн лекция, дискуссия</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -1111,12 +1004,8 @@
                     </div>
                     <div class="hidden">
                       <a href="#" class="day-plan__btn-status day-plan__btn-status_sign-up">Записаться</a>
-                      <p class="day-plan__format">
-                        <span>Формат:</span>
-                        <span>Дискуссия</span>
-                      </p>
                       <div class="day-plan__speakers">
-                        <p>Спикеры</p>
+                        <p>Спикеры:</p>
                         <ul class="day-plan__speakers-list">
                           <li class="day-plan__speakers-item">
                             <label class="checkbox-cup day-plan__checkbox">
@@ -1135,7 +1024,6 @@
           </ul>
         </div>
       </section>
-      
       <section class="sessions" id="sessions">
         <div class="sessions__about">
           <h2 class="sessions__title">мои сессии</h2>
@@ -1608,6 +1496,23 @@
                 <p class="speaker-card__name">
                   <span>Щевчук</span>
                   <span>Павел</span>
+                </p>
+                <p class="speaker-card__place">
+                  Место: <span>X</span>
+                </p>
+                <p class="speaker-card__likes">
+                  Лайков: <span>X</span>
+                </p>
+              </div>
+            </li>
+            <li class="rating__speaker speaker-card">
+              <div class="speaker-card__photo">
+                <img src="./assets/img/speakers/28.png" alt="Speaker">
+              </div>
+              <div class="speaker-card__info">
+                <p class="speaker-card__name">
+                  <span>Наталья</span>
+                  <span>Ерофеева</span>
                 </p>
                 <p class="speaker-card__place">
                   Место: <span>X</span>
