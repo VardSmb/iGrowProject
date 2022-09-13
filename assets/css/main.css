@@ -1092,14 +1092,12 @@ svg {
 .day-plan__external-speaker p {
   font-family: "HelveticaNeueBoldCondensed", sans-serif;
   font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   text-transform: uppercase;
 }
 .day-plan__external-speaker p:first-child {
   font-size: 12px;
-}
-
-.day-plan__external-speaker p:last-child {
-  font-size: 14px;
 }
 
 .day-plan__btn-status {
@@ -1361,8 +1359,8 @@ svg {
   width: auto;
   height: 100%;
   padding: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .speaker-card__info {
   padding-top: 20px;
