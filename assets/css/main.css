@@ -1356,11 +1356,11 @@ svg {
   background-size: 100%;
 }
 .speaker-card__photo img {
-  width: auto;
-  height: 100%;
+  width: 135px;
+  height: 135px;
   padding: 10px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .speaker-card__info {
   padding-top: 20px;
